@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<library>
+    <name>Городская библиотека № 1</name>
+
+    <books>
+        <book>
+            <title>Война и мир</title>
+            <year>1869</year>
+            <author>Л. Н. Толстой</author>
+            <quantity>3</quantity>
+        </book>
+        <book>
+            <title>Анна Каренина</title>
+            <year>1877</year>
+            <author>Л. Н. Толстой</author>
+            <quantity>2</quantity>
+        </book>
+        <book>
+            <title>Преступление и наказание</title>
+            <year>1866</year>
+            <author>Ф. М. Достоевский</author>
+            <quantity>4</quantity>
+        </book>
+        <book>
+            <title>Идиот</title>
+            <year>1869</year>
+            <author>Ф. М. Достоевский</author>
+            <quantity>1</quantity>
+        </book>
+        <book>
+            <title>Мастер и Маргарита</title>
+            <year>1967</year>
+            <author>М. А. Булгаков</author>
+            <quantity>5</quantity>
+        </book>
+    </books>
+
+    <readers>
+        <reader>
+            <full_name>Иван Петров</full_name>
+            <ticket_number>1001</ticket_number>
+        </reader>
+        <reader>
+            <full_name>Мария Соколова</full_name>
+            <ticket_number>1002</ticket_number>
+        </reader>
+        <reader>
+            <full_name>Алексей Смирнов</full_name>
+            <ticket_number>1003</ticket_number>
+        </reader>
+    </readers>
+
+    <loans>
+        <loan>
+            <book_title>Война и мир</book_title>
+            <reader_ticket>1001</reader_ticket>
+            <date_taken>2026-09-01</date_taken>
+        </loan>
+        <loan>
+            <book_title>Мастер и Маргарита</book_title>
+            <reader_ticket>1002</reader_ticket>
+            <date_taken>2026-09-10</date_taken>
+        </loan>
+        <loan>
+            <book_title>Идиот</book_title>
+            <reader_ticket>1003</reader_ticket>
+            <date_taken>2026-09-15</date_taken>
+        </loan>
+    </loans>
+</library>
