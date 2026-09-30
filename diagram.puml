@@ -1,0 +1,54 @@
+@startuml
+skinparam classAttributeIconSize 0
+
+class Author {
+    + full_name: str
+    + __str__(): str
+}
+
+class Book {
+    + title: str
+    + year: int
+    + author: Author
+    + quantity: int
+    + __str__(): str
+}
+
+class Reader {
+    + full_name: str
+    + ticket_number: int
+    + __str__(): str
+}
+
+class Loan {
+    + book: Book
+    + reader: Reader
+    + date_taken: date
+    + __str__(): str
+}
+
+class Library {
+    + name: str
+    + books: List[Book]
+    + readers: List[Reader]
+    + loans: List[Loan]
+    + add_book(book: Book): None
+    + add_reader(reader: Reader): None
+    + add_loan(loan: Loan): None
+    + find_book_by_title(title: str): Optional[Book]
+    + find_reader_by_ticket(ticket_number: int): Optional[Reader]
+}
+
+class LibraryDataError <<exception>> {
+}
+
+Exception <|-- LibraryDataError
+
+Library "1" o-- "*" Book : содержит
+Library "1" o-- "*" Reader : содержит
+Library "1" o-- "*" Loan : содержит
+Book "*" --> "1" Author : написана
+Loan "*" --> "1" Book : выдана книга
+Loan "*" --> "1" Reader : взял читатель
+Book ..> LibraryDataError : бросает при\nневерных данных
+@enduml
